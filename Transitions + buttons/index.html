@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS3 Transitions</title>
+    <style>
+        .button {
+            text-decoration: none;
+            color: inherit;
+            border: 1px solid black;
+            text-transform: uppercase;
+            font-family: sans-serif;
+            letter-spacing: 1px;
+            font-weight: 100;
+            padding: 10px 0px;
+            display: block;
+            margin: 40px 0;
+            width: 200px;
+            text-align: center;
+        }
+
+        .button.solid {
+            color: white;
+            background-color: rgb(25, 90, 23);
+            /*
+            transition-property: all;
+            transition-duration: .5s;
+            transition-timing-function: linear;
+            transition-delay: 1s;
+            */
+            transition: all 2s ease-out;
+            /*  https://cubic-bezier.com/ */
+        }
+
+        .button.solid:hover {
+            background-color: transparent;
+            color: inherit;
+            width: 600px;
+        }
+
+        .button.big {
+            width: 250px;
+            font-size: 1.2em;
+            padding: 16px 0;
+        }
+
+        .button.center {
+            /* Centrado horizontal con el valor auto en el margen lateral */
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+
+        <h1>CSS3 transtions</h1>
+
+        <a class="button" href="#">Conócenos</a>
+        <a class="button solid" href="#">Conócenos</a>
+        <a class="button big" href="#">Conócenos</a>
+        <a class="button solid big" href="#">Conócenos</a>
+        <a class="button center solid" href="#">Conócenos</a>
+
+    </main>
+</body>
+
+</html>
